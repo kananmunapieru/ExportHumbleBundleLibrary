@@ -30,11 +30,16 @@ async function getGamesList() {
             .getAttribute("title");
         let bundle_name = gamesTr[i].getElementsByTagName("p")[0]
             .getAttribute("title");
+      
+        let game_key = gamesTr[i].getElementsByTagName("keyfield-value")[0]
+            .getAttribute("title");
+
 
         let map = {
             'name': name,
             'redemption-platform': platform,
             'bundle-name': bundle_name
+            'game_key': game_key
         };
         gamesList.push(map);
     }
@@ -43,18 +48,6 @@ async function getGamesList() {
     return gamesList;
 }
 
-/**
- * Sets the state of the checkbox to be that of parameter enabled
- * on "Hide Redeemed Keys" button at
- * https://www.humblebundle.com/home/keys
- * @param enabled desired state of the "Hide Redeemed Keys" button
- */
-function setHideRedeemedGames(enabled) {
-    let checkbox = document.getElementById("hide-redeemed");
-    if (checkbox.checked !== enabled) {
-        checkbox.click();
-    }
-}
 
 /**
  * Goes to the first page at home/keys URL path
