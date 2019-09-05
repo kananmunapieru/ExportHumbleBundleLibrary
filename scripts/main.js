@@ -30,8 +30,7 @@ async function getGamesList() {
             .getAttribute("title");
         let bundle_name = gamesTr[i].getElementsByTagName("p")[0]
             .getAttribute("title");
-      
-        let game_key = gamesTr[i].getElementsByTagName("keyfield-value")[0]
+        let game_key = gamesTr[i].getElementsByClassName("keyfield-value")[0]
             .getAttribute("title");
 
 
@@ -39,7 +38,7 @@ async function getGamesList() {
             'name': name,
             'redemption-platform': platform,
             'bundle-name': bundle_name
-            'game_key': game_key
+            'game-key': game_key
         };
         gamesList.push(map);
     }
