@@ -30,7 +30,7 @@ async function getGamesList() {
             .getAttribute("title");
         let bundle_name = gamesTr[i].getElementsByTagName("p")[0]
             .getAttribute("title");
-        let game_key = gamesTr[i].getElementsByClassName("keyfield-value")[0]
+        let game_key = gamesTr[i].getElementsByClassName("container js-third-party")[0]
             .getAttribute("title");
 
 
