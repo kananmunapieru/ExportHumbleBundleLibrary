@@ -37,7 +37,7 @@ async function getGamesList() {
         let map = {
             'name': name,
             'redemption-platform': platform,
-            'bundle-name': bundle_name
+            'bundle-name': bundle_name,
             'game-key': game_key
         };
         gamesList.push(map);
